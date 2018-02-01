@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+{% block content %}
+    {% for card in object_list %}
+        <h2>{{ card.first }}</h2>
+        <h2>{{ card.last }}</h2>
+    {% endfor %}
+{% endblock %}

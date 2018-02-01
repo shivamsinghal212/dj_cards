@@ -3,8 +3,11 @@
 
 {% block content %}
     {% if user.is_authenticated %}
-    Hi {{ user.username }} Welcome to Cardify!!
-    <p><a href="{% url 'logout' %}">Logout</a> </p>
+    Hi {{ user.username }} Welcome to Cardify!!<br>
+        <p>Select the type of card:</p>
+        <a href="{% url 'business' %}">Business Card</a>
+        <a href="#">Birthday Card</a>
+        </p><a href="{% url 'logout' %}">Logout</a> </p>
     {% else %}
     <p> You need to log-in first </p>
     <a href="{% url 'login' %}"> Login </a><p> or </p>
